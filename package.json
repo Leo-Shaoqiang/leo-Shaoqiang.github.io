@@ -1,0 +1,17 @@
+{
+  "name": "Leo-shaoqiang-blog",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "npm run build && pm2 start appjs",
+    "d": "bash deploy.sh"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "MooozzZ <1362610792@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.22"
+  }
+}
