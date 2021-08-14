@@ -1,7 +1,7 @@
 {
   "name": "Leo-shaoqiang-blog",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
+    "dev": "vuepress dev docs --temp .temp",
     "docs:build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "npm run build && pm2 start appjs",
@@ -12,6 +12,11 @@
   "author": "MooozzZ <1362610792@qq.com>",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^2.0.0-beta.22"
+    "vuepress": "^2.0.0-beta.22",
+    "watchpack": "^1.6.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pm2": "^5.1.0"
   }
 }
