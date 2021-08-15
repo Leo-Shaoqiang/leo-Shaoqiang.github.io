@@ -11,8 +11,9 @@ git init
 git add -A
 git commit -m 'chore: %%% deploy'
 
-echo 'www.liaosqnotes.com' > CNAME
 
+
+git push -f git@github.com:Leo-Shaoqiang/leo-Shaoqiang.github.io.git main
 
 cd -
 rm -rf docs/.vuepress/dist
