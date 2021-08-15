@@ -13,7 +13,8 @@ git commit -m 'chore: %%% deploy'
 
 
 
-git push -f git@github.com:Leo-Shaoqiang/leo-Shaoqiang.github.io.git main
+git push -f git@github.com:Leo-Shaoqiang/leo-Shaoqiang.github.io.git master 
 
 cd -
+
 rm -rf docs/.vuepress/dist
