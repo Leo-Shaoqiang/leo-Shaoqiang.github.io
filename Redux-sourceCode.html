@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>前言 | Leo-Shaoqiang's blog</title><meta name="description" content="Just Do it"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="VuePress 2.0.0-beta.22">
+    <link rel="preload" href="/assets/js/runtime~app.30188423.js" as="script"><link rel="preload" href="/assets/css/styles.28d59393.css" as="style"><link rel="preload" href="/assets/js/640.64d722d8.js" as="script"><link rel="preload" href="/assets/js/app.80234d5f.js" as="script">
+    <link rel="stylesheet" href="/assets/css/styles.28d59393.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><header class="navbar"><div class="toggle-sidebar-button"><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><span><a href="/" class=""><img class="logo" src="https://vuejs.org/images/logo.png" alt="Leo-Shaoqiang&#39;s blog"><span class="site-name can-hide">Leo-Shaoqiang&#39;s blog</span></a></span><div class="navbar-links-wrapper" style=""><!--[--><!--]--><!----><!--[--><!--]--><button class="toggle-dark-button"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><div class="sidebar-mask"></div><aside class="sidebar"><!----><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--[--><a href="/react/" class="nav-link sidebar-heading sidebar-item" aria-label="React"><!--[--><!--]--> React <!--[--><!--]--></a><ul class=""><li><!--[--><a href="/react/redux/redux.md" class="nav-link sidebar-item" aria-label="redux"><!--[--><!--]--> redux <!--[--><!--]--></a><!----><!--]--></li></ul><!--]--><!--[--><a href="/browser/browserRender/browser.md" class="nav-link sidebar-heading sidebar-item" aria-label="Browser"><!--[--><!--]--> Browser <!--[--><!--]--></a><!----><!--]--><!--]--></ul><!--[--><!--]--></aside><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="前言" tabindex="-1"><a class="header-anchor" href="#前言" aria-hidden="true">#</a> 前言</h1><p>近日，出于对 Redux 的好奇和想对自己用过的东西知根知底之目的，做了一个 Redux 的自我检测，以便彻底了解其精髓之处。下面我会对使用 Redux 之后产生的疑问做一个清单，用问题导向往下深挖。</p><h2 id="问题清单" tabindex="-1"><a class="header-anchor" href="#问题清单" aria-hidden="true">#</a> 问题清单</h2><hr><ol><li>state 初始化如何让全局都能访问到？</li><li>dispatch 之后，Redux 是如何去处理的？</li><li>reducer 是如何处理的？</li><li>state 中的数据被修改之后，订阅者们如何去收到更新后的数据？</li><li>为什么 redux 的精髓在 combineReducer 和 middleware？</li><li>applyMiddleware 中为什么一个临时变量 dispatch 被赋值了 2 次？</li><li>applyMiddleware 中 middlewareAPI 的 dispatch 为什么要用匿名函数包裹？</li><li>React 发送了 dispatch 之后，如何感知 state 的改变？</li><li>hook 的出现是否会影响 Redux 的使用？</li></ol><hr><h2 id="redux-源码目录简介" tabindex="-1"><a class="header-anchor" href="#redux-源码目录简介" aria-hidden="true">#</a> Redux 源码目录简介</h2><p>Redux 暴露出来的五个接口：</p><ul><li>createStore （会创建一个 store 及其相应的 dispatch 和 subscribe 操作）</li><li>combineReducers (合并多个 reducer 为一个总的 reducer)</li><li>bindActionCreators (返回包裹 dispatch 的函数可以直接使用。 一般用在 mapDispatchToProps 里)</li><li>applyMiddleware (提供中间件，如 redux-thunk、redux-logger)</li><li>compose (combineReducers 中会用到的工具函数)</li></ul><p>我们将通过上述接口来一一解答我们提出的问题。ps：以下源码均是简化之后的代码</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>dispatch 之后，Redux 是如何去处理的？
+state 中的数据被修改之后，页面如何去收到更新后的数据？
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>这些答案在 createStore.js 中，先来看看代码结构：</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>createStore(reducer, preloadedState, enhancer) {
+  // 转换参数
+  if (typeof preloadedState === &#39;function&#39; &amp;&amp; typeof enhancer === &#39;undefined&#39;) {
+    enhancer = preloadedState
+    preloadedState = undefined
+  }
+  let currentReducer = reducer // 当前的reducer，支持通过 store.replaceReducer 方式动态替换 reducer，为代码热替换提供可能。（之后会写一篇 react-redux 的文章来解读）
+  let currentState = preloadedState // 当前的state
+  let currentListeners = [] // 存储更新函数的数组
+  let nextListeners = currentListeners // 下次dispatch将会触发的更新函数数组
+  let isDispatching = false //类似一把锁，如果正在dispatch action，那么就做一些限制
+
+  function getState() {
+    // 返回当前的state， 可以调用store.getState()获取到store中的数据，
+    ...
+  }
+
+  function subscribe(listener) {
+    // 订阅一个更新函数（listener），实际上的订阅操作就是把listener放入一个listeners数组
+    // 该方法会返回一个 unSubscribe() 函数，以便从数组中删除该监听函数。
+    // 但是注意，这两个操作都是在dispatch不执行时候进行的。因为dispatch执行时候会循环执行更新函数，要保证listeners数组在这时候不能被改变
+    ...
+  }
+
+  function dispatch(action) {
+    // 接收action，调用reducer根据action和当前的state，返回一个新的state
+    // 循环调用listeners数组，执行更新函数，函数内部会通过store.getState()获取state，此时的state为最新的state，完成页面的更新
+    ...
+  }
+
+  return {
+    dispatch,
+    subscribe,
+    getState,
+  }
+
+}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><p>我们知道页面可以通过 store.getState() 去获取当前的最新状态，而页面如果修改了数据会发送一个 dispatch(type) ，而这个操作便是问题的关键：</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>function dispatch(action) {
+    if (!isPlainObject(action)) {
+      throw new Error(
+        &#39;Actions must be plain objects. &#39; +
+          &#39;Use custom middleware for async actions.&#39;
+      )
+    }
+
+    if (typeof action.type === &#39;undefined&#39;) {
+      throw new Error(
+        &#39;Actions may not have an undefined &quot;type&quot; property. &#39; +
+          &#39;Have you misspelled a constant?&#39;
+      )
+    }
+    // 正在dispatch的话不能再次dispatch，也就是说不可以同时dispatch两个action
+    if (isDispatching) {
+      throw new Error(&#39;Reducers may not dispatch actions.&#39;)
+    }
+
+    try {
+      isDispatching = true
+      // 获取到当前的state
+      currentState = currentReducer(currentState, action)
+    } finally {
+      isDispatching = false
+    }
+// 此处的会将 subscribe() 里订阅的监听依次跑一遍，数组里面都是需要获取数据的函数。
+    const listeners = (currentListeners = nextListeners)
+
+// 循环执行当前的linstener
+    for (let i = 0; i &lt; listeners.length; i++) {
+      const listener = listeners[i]
+      // 此处并没有将最新状态作为参数传递的原因是因为在监听器中，我们会直接调用 store.getState() 方法去拿到最新的状态，此处只是起到通知作用。这也是数据被更改之后，页面收到通知而去更新数据的方式。
+      listener()
+    }
+    return action
+  }
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><p>解答以上问题：</p><p>Q: dispatch 之后，Redux 是如何去处理的？state 中的数据被修改之后，页面如何去收到更新后的数据？</p><p>A: 首先会利用当前的 reducer、state 以及传入的参数 action 得到新的 state， 然后通过触发监听数组中的函数，让函数中的使用的 store.getState() 再次触发，起到通知数据更新的作用。</p><p>基本上 createStore.js 讲完了，接下来看一下 combineReducers.js 来解决以下问题：</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>reducer 是如何处理的？
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>// 获取到所有reducer的名字，组成数组
+const reducerKeys = Object.keys(reducers)
+// 最终合成的 reducers 集合
+const finalReducers = {}
+ // 遍历所有的 reducer 使 finalReducers 变成 key( reducer 名字) ： value( reducer 执行函数)的对象。
+for (let i = 0; i &lt; reducerKeys.length; i++) {
+    const key = reducerKeys[i]
+    if (typeof reducers[key] === &#39;function&#39;) {
+      finalReducers[key] = reducers[key]
+    }
+  }
+   const finalReducerKeys = Object.keys(finalReducers)
+
+// 该函数为 combineReducers.js 核心，主要思路是对传入的 reducer 进行对比，如果任何一个 reducer 返回的 state 与之前的 state 不同，则会返回全新的 state 。(其实这里有个疑问，该函数如果只改了一个 reducer 的 state 数据，都会返回一个全新的 state，为什么会这样处理？)
+return function combination (state ={}, action){
+    let hasChanged = false
+    const nextState ={}
+    for (let i =0; i &lt; finalReducerKeys.length; i++) {
+        const key = finalReducerKeys[i]
+        const reducer = finalReducers[key]
+        // 获取每个 reducer 的旧 state
+        const previousStateForKey = state[key]
+        // 根据旧 state 推出新的 state (纯函数的优势：相同的 state 和 action 返回的新 state 也会是不变的。)
+        const nextStateForKey = reducer(previousStateForKey, action)
+        if (typeof nextStateForKey ===&#39;undefined&#39;) {
+            const errorMessage = getUndefinedStateErrorMessage(key, action)
+            throw newError(errorMessage)
+        }
+        // 最后一步 判断是否和之前的 state 是否一致。
+        nextState[key]= nextStateForKey
+        hasChanged = hasChanged || nextStateForKey !== previousStateForKey
+ }
+    return hasChanged ? nextState : state
+}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><p>前面的都比较容易理解，相对比较绕的就是 applyMiddleware.js,阅读前需了解<a href="https://zhuanlan.zhihu.com/p/50247174" target="_blank" rel="noopener noreferrer">柯理化<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a> 和 node 中间件相关知识, 简单来说就是把一个带有多个参数的函数转换成一系列的嵌套函数。它返回一个新函数，这个新函数期望传入下一个参数。解读 applyMiddleware.js 来回答以下问题：</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>为什么一个临时变量 dispatch 被赋值了 2 次？
+middlewareAPI 的 dispatch 为什么要用匿名函数包裹？
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>接下来我们逐一分析源码：</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>function applyMiddleware(...middlewares) {
+  return (createStore) =&gt;
+      (reducer, preloadedState) =&gt; {
+        const store = createStore(reducer, preloadedState)
+
+        let dispatch = () =&gt; {
+          throw new Error(
+              &#39;Dispatching while constructing your middleware is not allowed. &#39; +
+              &#39;Other middleware would not be applied to this dispatch.&#39;
+          )
+        }
+
+        const middlewareAPI = {
+          getState: store.getState,
+          dispatch: (action, ...args) =&gt; dispatch(action, ...args)
+        }
+        const chain = middlewares.map(middleware =&gt; middleware(middlewareAPI))
+
+        dispatch = compose(...chain)(store.dispatch)
+
+        return {
+          ...store,
+          dispatch
+        }
+      }
+}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p>可以看到整体构造传入中间件(middlewares),内部函数返回正常的 store 和改造过后的 dispatch。而改造过后的 dispatch 是由 compose(...chain)(store.dispatch) 生成的，首先 compose(...chain) 来自于暴露的第五个接口 compose.js ,它其实就是我们所谓的柯理化处理函数，而 chain 则是一个类似下面的数组形式：</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>    next =&gt; action =&gt; {
+        return next(action)
+    }
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>compose(...chain) 只是将数组中的函数拼接起来，并未执行。且 compose 最后返回的仍然是一个层层包裹的函数。如下：</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>const composedFunc = (next3) =&gt; {
+  return
+  ((next2) =&gt; {
+        return func1(func2(next2))
+    })(func3(next3))
+}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>而真正执行的时候就是在传入这个 dispatch 参数时 compose(...chain)(dispatch)，这个 dispatch 正是上面的 next3，next2 就是 func3(next3) 的返回值，依次类推，得到如下：</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>func1(func2(func3(dispatch)));
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><div class="language-const ext-const line-numbers-mode"><pre class="language-const"><code>  console.log(&quot;coreFun1 run&quot;);
+  ((action) =&gt; {
+    console.log(&quot;coreFunc2 run&quot;);
+    ((action) =&gt; {
+      console.log(&quot;coreFunc3 run&quot;);
+      dispatch(action);
+    })(action);
+  })(action);
+}
+
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>根据 node 中间件洋葱模型来看，所有的中间件处理了 action 之后 会往里传递，然后最后在最内层触发 dispatch 之后在将其结果作为参数往外传，最终得到一个全新的函数。</p><p>再顺着源码往上看，</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>const store = createStore(reducer, preloadedState)
+
+        let dispatch = () =&gt; {
+          throw new Error(
+              &#39;Dispatching while constructing your middleware is not allowed. &#39; +
+              &#39;Other middleware would not be applied to this dispatch.&#39;
+          )
+        } // 第一次赋值
+
+        const middlewareAPI = {
+          getState: store.getState,
+          dispatch: (action, ...args) =&gt; dispatch(action, ...args)
+        }
+const chain = middlewares.map(middleware =&gt; middleware(middlewareAPI))
+dispatch = compose(...chain)(store.dispatch) // 第二次赋值
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>这段也主要是为了给每个 middleware 基本的 getState 和 dispatch。 解决几个常问到的疑点：</p><ol><li>为什么一个临时变量 dispatch 被赋值了 2 次？ 首先从第一个变量返回的 throw Error 可以看出这段代码希望在 middleware 数组被构建时， dispatch 不应该被调用，否则抛错。而在 middlewareAPI 的 dispatch 中被调用了一次但没触发这个 throw Error，是因为其实直到给 dispatch 第二次赋值时才真正调用 dispatch（我们之前解读到直到 compose 函数传入了(store.dispatch) 之后才会触发调用），所以这时 middlewareAPI 的 dispatch 并不会触发。</li><li>middlewareAPI 的 dispatch 为什么要用匿名函数包裹？ 目的就是如果每个 middleware 对 dispatch 有所改变，middleware 里面的 dispatch 也会相应做出改变（如一问中所说，compose(...chain)(store.dispatch) 触发了 middlewareAPI 的 dispatch 被调用）。</li></ol><p>至此解决完 applyMiddleware 的相关问题，redux 的解析也到此结束，如有疑问或者解读错误的地方，还望大佬们指正。</p><p>参考链接： <a href="https://zhuanlan.zhihu.com/p/304688473" target="_blank" rel="noopener noreferrer">读源码理解 Redux Middleware 中间件 - FreewheelLee 的文章<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a><a href="https://zhuanlan.zhihu.com/p/34651008" target="_blank" rel="noopener noreferrer">redux 中间件的原理——从懵逼到恍然大悟 - Dell Lee 的文章<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a><a href="https://zhuanlan.zhihu.com/p/74279078" target="_blank" rel="noopener noreferrer">简单梳理 Redux 的源码与运行机制 - Nero 的文章<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a></p><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><span class="meta-item-info">8/14/2021, 4:22:16 PM</span></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: 1362610792@qq.com">MooozzZ</span><!----><!--]--><!--]--></span></div></footer><!----><!--[--><!--]--></main></div><!----><!--]--></div>
+    <script src="/assets/js/runtime~app.30188423.js" defer></script><script src="/assets/js/640.64d722d8.js" defer></script><script src="/assets/js/app.80234d5f.js" defer></script>
+  </body>
+</html>
